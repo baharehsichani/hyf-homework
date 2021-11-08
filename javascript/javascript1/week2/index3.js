@@ -1,5 +1,5 @@
 
-var arrayOfWeekdays = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+const arrayOfWeekdays = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
 const today=new Date()
 const day=today.getDate()
