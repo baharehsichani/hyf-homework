@@ -4,14 +4,13 @@ let notes = [];
 function saveNote(content, id) {
   // write some code here
   
-    let obj={
+    let taskObj={
         content:content,
         id:id
     }
     
-    notes.push(obj)
-}
-  
+    notes.push(taskObj)
+  } 
 
 
 saveNote("Pick up groceries", 1);
@@ -20,21 +19,25 @@ saveNote("Do laundry", 2);
 console.log(notes);
 
 function getNote(id) {
+ 
     // your code here
-    for (i=0;i <=notes.length;i++){
-        if(id != ""){
+    let checkId=false
+    if(typeof id === 'number'){
+       for (i=0;i <notes.length;i++){
           if(notes[i].id===id)
-            return notes[i]
-            else
-              return (console.log("This id does not exist"))
+          {
+            checkId=true
+            console.log(notes[i])     
+          }     
         }
-         
-        return (console.log("Id has to be a number"))
-    }
+        if (checkId===false)
+          console.log("This is does not exist")
+    }else     
+      (console.log("Id has to be a number"))
   }
   
-  const firstNote = getNote(1);
-  console.log(firstNote);
+  getNote(2);
+  
 
 
   function logOutNotesFormatted() {

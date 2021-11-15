@@ -31,14 +31,14 @@ const travelInformation = {
 
 function calculateTime(arr){
 
-  const calculateHour=arr.destinationDistance / arr.speed
-  const calculateMinute=arr.destinationDistance % arr.speed
+  let calculateHour=arr.destinationDistance / arr.speed
+  let calculateMinute=arr.destinationDistance % arr.speed
    
 
-  var str=calculateHour.toString()
-  var numarray=str.split('.')
-  var a=new Array()
-  a=numarray
+  let str=calculateHour.toString()
+  let numArray=str.split('.')
+  let a=new Array()
+  a=numArray
   
   return console.log(`Travel time is : ${a[0]} hours and ${calculateMinute} minutes`)
   
@@ -54,7 +54,7 @@ console.log("-------------------------------")
 
 let age =80
 
-age*=(365*24*60)
+age=(365*24*60*age)
 
 let seriesDurations = [
   {
@@ -84,8 +84,8 @@ function logOutSeriesText(){
     let dayToMinutes= seriesDurations[i].days*24*60
     let hourToMinutes= seriesDurations[i].hours*60
 
-    let totalMinutes= dayToMinutes+hourToMinutes+seriesDurations[i].minutes
-    totalMinutes*=100
+    let totalMinutes= (dayToMinutes+hourToMinutes+seriesDurations[i].minutes)*100
+   
     let spendTime=(totalMinutes / age).toFixed(3)
     console.log(`${seriesDurations[i].title} took ${spendTime}% of my life`)
 
