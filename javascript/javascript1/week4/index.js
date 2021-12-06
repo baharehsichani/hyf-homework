@@ -30,11 +30,25 @@ function getReply(command) {
         console.log('singing in the shower added to your todo')              
     }
 
-    if(command.includes('Remove fishing from my todo'))
-    {
-        todoName.shift()
-        console.log('fishing remove from your todo list')
+    if (command.startsWith("Remove ") && command.endsWith(" from my todo")) {
+        removeFromTodoList(command);
     }
+    function remove(todoArray, fromToDo) {
+        let indexToRemove = todoArray.indexOf(fromToDo);
+        while (indexToRemove != -1) {
+            todoArray.splice(indexToRemove, 1);
+            indexToRemove = todoArray.indexOf(fromToDo);
+        }
+        console.log("Removed " + fromToDo + " from your todo");
+    }
+    function removeFromTodoList(command){
+        let firstIndex = "Remove".length;
+        let secondIndex = command.indexOf(" from my todo");
+        let fromToDo = command.slice(firstIndex, secondIndex).trim();
+        remove(todoArray, fromToDo);
+    }    
+    
+   
       
     if (command.includes('what is on my todo')){
 
@@ -92,9 +106,9 @@ function getReply(command) {
         function setTimer(){
             console.log('Timer done')
         }
-        setTimeout(setTimer, 60000,  );
+        setTimeout(setTimer, timerSplitArray[4]*60*1000,  );
 
-    }
+    } 
 
     
 }
