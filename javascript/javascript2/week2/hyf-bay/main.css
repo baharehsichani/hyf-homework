@@ -1,0 +1,77 @@
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body, h2 {
+    margin: 0;
+    padding: 35px;
+}
+
+.body-container{
+    border-radius: 35px;
+    border: solid 1px rgb(194, 205, 216);
+}
+
+
+
+.menu{
+    display:flex;
+    width: 100%;
+    background-color: rgb(190, 202, 212);
+}
+.menu-left{
+    padding-left:35px;
+    width: 50%;
+    color:white;
+    font-weight: bold;
+}
+.menu-right{
+    width: 50%;
+}
+
+.formBody {
+    padding-top: 10px;
+    display:flex;
+    width: 100%;
+    background-color: rgb(196, 193, 187);
+}
+.formLeftCol{
+    padding-left: 100px;
+    width: 50%;
+    height: 100px;
+    color:rgb(109, 80, 8);
+}
+.formRightCol{
+    width: 50%;
+    height: 100px;
+    color:rgb(102, 101, 98);
+}
+.productList-container{
+    background-color: rgb(196, 193, 187);
+    padding-left: 50px;
+    padding-right: 50px;
+    width:100%;
+}
+.productList{
+    border: gray 1px solid;
+    height: 400px;
+    overflow: scroll;
+    background-color: white;
+}
+.productList span{
+    font-weight: bold;
+}
+
+.productList li{
+    padding-bottom: 10px;
+}
+
+.footer-container{
+    height:35px;
+    width:100%;    
+    background-color: rgb(83, 82, 80);
+}
